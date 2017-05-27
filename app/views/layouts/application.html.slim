@@ -1,0 +1,14 @@
+doctype html
+html lang=I18n.locale xmlns="http://www.w3.org/1999/xhtml"
+  head
+    title Coffee 
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = javascript_pack_tag 'application'
+    = stylesheet_pack_tag 'application'
+
+  body
+    .ui.container
+      = yield
+
