@@ -22,6 +22,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'slim'
 gem 'enumerize'
+gem 'foreman'
+gem 'stripe'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -31,6 +34,8 @@ group :development, :test do
   gem 'selenium-webdriver'
 
   gem 'pry'
+  gem 'pry-remote'
+  gem 'figaro'
 end
 
 group :development do
