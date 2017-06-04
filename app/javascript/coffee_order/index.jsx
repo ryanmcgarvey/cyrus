@@ -21,11 +21,7 @@ class CoffeeOrderConfig extends React.Component {
     let controller = this.props.controller;
 
     return(
-      <Form className='massive'>
-        <Form.Field>
-          <input placeholder='Name' name='name' value={order.name} onChange={this.onChange} />
-        </Form.Field>
-      </Form>
+      <Form.Input fluid size='massive' placeholder='Name' name='name' value={order.name} onChange={this.onChange} />
     )
   }
 }

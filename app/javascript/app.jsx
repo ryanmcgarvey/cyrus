@@ -54,14 +54,14 @@ export default class App extends React.Component {
   configure_order(e){
     e.preventDefault();
     let order = this.state.order;
-    order.step = 1;
+    order.step = 2;
     this.setState({order: order});
   }
 
   save_coffee(e){
     e.preventDefault();
     let order = this.state.order;
-    order.step = 2;
+    order.step = 1;
     this.setState({order: order});
   }
 
@@ -84,23 +84,23 @@ export default class App extends React.Component {
     let step = order.step;
 
     let buttons = [
+      <Button icon='arrow right' content='Next' fluid color='blue' size='massive' labelPosition='right' onClick={this.save_coffee} />,
       <Button icon='arrow right' content='Next' fluid color='blue' size='massive' labelPosition='right' onClick={this.configure_order} />,
-      <Button icon='coffee' content='Order Coffees' fluid color='blue' size='massive' labelPosition='right' onClick={this.save_coffee} />,
       <Checkout controller={this} config={this.props.config} >
         <Button icon='dollar' content='Checkout' fluid color='green' size='massive' labelPosition='left' />
       </Checkout>
     ]
 
     let steps = [
-      { completed: (step > 0), active: (step == 0), title: 'Prep'},
-      { completed: (step > 1), active: (step == 1), title: 'Order'},
+      { completed: (step > 0), active: (step == 0), title: 'Order'},
+      { completed: (step > 1), active: (step == 1), title: 'Prep'},
       { completed: (step > 2), active: (step == 2), title: 'Pay'},
     ]
 
     let panels = [
-      (<CoffeeOrderConfig config={this.props.config} order={this.state.order} controller={this} />),
-      (<CoffeeOrderForm config={this.props.config} order={this.state.order} controller={this} />),
-      (<CoffeeOrderReview order={this.state.order} controller={this} />),
+      <CoffeeOrderForm config={this.props.config} order={this.state.order} controller={this} />,
+      <CoffeeOrderConfig config={this.props.config} order={this.state.order} controller={this} />,
+      <CoffeeOrderReview order={this.state.order} controller={this} />,
     ]
 
     return(

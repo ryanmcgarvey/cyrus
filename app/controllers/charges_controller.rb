@@ -24,6 +24,7 @@ class ChargesController < ActionController::API
         :coffee_temperature,
         :cream,
         :cream_temperature,
+        :size,
         :notes
       ]
     )

@@ -26,9 +26,9 @@ export default class CoffeeOrderform extends React.Component {
     });
 
     return(
-      <Form className='massive'>
+      <div>
         {coffees}
-      </Form>
+      </div>
     )
   }
 }
