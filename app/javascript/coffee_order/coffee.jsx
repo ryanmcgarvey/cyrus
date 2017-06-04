@@ -1,5 +1,5 @@
 import React from 'react'
-import { Divider, Grid, Button, Checkbox, Form, Input, Radio, Select, TextArea } from 'semantic-ui-react'
+import { Header, Divider, Grid, Button, Checkbox, Form, Input, Radio, Select, TextArea } from 'semantic-ui-react'
 
 export default class Coffee extends React.Component {
 
@@ -20,8 +20,9 @@ export default class Coffee extends React.Component {
     let options = this.props.config.options;
     let index = this.props.index;
     let coffee = this.props.order.coffee_orders[index];
+    let controller = this.props.controller;
 
-    let fields = ['bean', 'coffee_temperature', 'cream', 'cream_temperature', 'size']
+    let fields = ['size', 'bean', 'coffee_temperature', 'cream', 'cream_temperature']
 
     let selects = fields.map((f) =>
       <div key={`select_${f}_for_coffee_${index}`} >
@@ -32,6 +33,10 @@ export default class Coffee extends React.Component {
 
     return(
       <div>
+        <Button floated='right' negative icon='trash' size='large' content='Delete' labelPosition='right' onClick={controller.remove_coffee} data-index={index}/> 
+        <Header as='h2' textAlign='left' >
+          Item {index + 1}
+        </Header>
         {selects}
       </div>
     )

@@ -21,13 +21,25 @@ export default class CoffeeOrderform extends React.Component {
 
     let coffees = order.coffee_orders.map((coffee, i) => {
       return(
-        <Coffee key={`coffee_${i}`} config={this.props.config} order={order} onChange={this.onChange} index={i} controller={this.props.controller} />
+        <div key={`coffee_${i}`} >
+          <Coffee config={this.props.config} order={order} onChange={this.onChange} index={i} controller={this.props.controller} />
+          <Divider hidden />
+        </div>
       )
     });
+
+    let new_coffee_buttons = (
+      <Button.Group fluid size='massive' >
+        <Button onClick={controller.add_coffee} data-size="small"  content='Small'  />
+        <Button onClick={controller.add_coffee} data-size="medium" content='Medium' />
+        <Button onClick={controller.add_coffee} data-size="large"  content='Large'  />
+      </Button.Group>
+    )
 
     return(
       <div>
         {coffees}
+        {new_coffee_buttons}
       </div>
     )
   }

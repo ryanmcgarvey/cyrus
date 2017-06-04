@@ -10,12 +10,7 @@ export default class App extends React.Component {
     this.state = {
       order: {
         name: '',
-        coffee_orders: [{
-          bean: '',
-          coffee_temperature: '',
-          cream: '',
-          cream_temperature: ''
-        }],
+        coffee_orders: [],
         step: 0,
       },
 
@@ -25,7 +20,8 @@ export default class App extends React.Component {
     this.save_coffee = this.save_coffee.bind(this);
     this.configure_order = this.configure_order.bind(this);
     this.submit_order = this.submit_order.bind(this);
-    this.active_button = this.active_button.bind(this);
+    this.add_coffee = this.add_coffee.bind(this);
+    this.remove_coffee = this.remove_coffee.bind(this);
   }
 
   submit_order(token){
@@ -75,7 +71,18 @@ export default class App extends React.Component {
     });
   }
 
-  active_button() {
+  remove_coffee(e) {
+    let index = e.target.dataset.index;
+    let order = this.state.order;
+    order.coffee_orders.splice(index, 1);
+    this.update_order(order);
+  }
+
+  add_coffee(e) {
+    let size = e.target.dataset.size;
+    let order = this.state.order;
+    order.coffee_orders.push({size: size});
+    this.update_order(order);
   }
 
 
