@@ -9,7 +9,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       order: {
-        name: 'ryan',
+        name: '',
         coffee_orders: [{
           bean: '',
           coffee_temperature: '',
@@ -92,9 +92,9 @@ export default class App extends React.Component {
     ]
 
     let steps = [
-      { completed: (step > 0), active: (step == 0), title: 'Configure', description: 'Tell us who is picking up the coffee' },
-      { completed: (step > 1), active: (step == 1), title: 'Order', description: 'Place your order' },
-      { completed: (step > 2), active: (step == 2), title: 'Pay', description: 'Verify order details' },
+      { completed: (step > 0), active: (step == 0), title: 'Prep'},
+      { completed: (step > 1), active: (step == 1), title: 'Order'},
+      { completed: (step > 2), active: (step == 2), title: 'Pay'},
     ]
 
     let panels = [
