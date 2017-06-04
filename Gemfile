@@ -25,6 +25,7 @@ gem 'enumerize'
 gem 'foreman'
 gem 'stripe'
 gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
+# gem 'jquery-rails'
 
 
 

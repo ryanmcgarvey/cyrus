@@ -27,11 +27,19 @@ export default class App extends React.Component {
   submit_order(token){
     this.submitting = true;
     let order = this.state.order;
+    let data = { 
+      order: {
+        name: order.name, 
+        pickup_time: order.pickup_time, 
+        coffee_orders: order.coffee_orders
+      }, 
+      stripe: token
+    };
     $.ajax( {
       url: this.props.config.charges_url,
       type: 'POST',
       dataType: 'JSON',
-      data: { order: {name: order.name, coffee_orders: order.coffee_orders}, stripe: token},
+      data: data,
       success: (response) => { 
         this.submitting = false; 
         this.reset_form();
@@ -65,7 +73,7 @@ export default class App extends React.Component {
     this.setState({
       order: {
         name: '',
-        coffee_orders: [{}],
+        coffee_orders: [],
         step: 0,
       },
     });

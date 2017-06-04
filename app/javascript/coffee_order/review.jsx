@@ -18,6 +18,7 @@ export default class CoffeeOrderReview extends React.Component {
     let coffees = order.coffee_orders.map((coffee, i) => {
       let coffee_color = this.label_for_temp(coffee.coffee_temperature);
       let cream_color = this.label_for_temp(coffee.cream_temperature);
+
       return(
         <Segment key={`coffee_view_${i}`} >
           <Label color={coffee_color}>
@@ -34,7 +35,9 @@ export default class CoffeeOrderReview extends React.Component {
 
     return(
       <div>
-        <Header as='h1'>{order.name}</Header>
+        <Header as='h1'>
+          {order.name} @ {order.pickup_time.toLocaleString()}
+        </Header>
         {coffees}
       </div>
     )

@@ -14,9 +14,12 @@ class Order < ApplicationRecord
   end
 
   def self.from_params(params)
-    Order.new(name: params[:name]).tap do |order|
-      params[:coffee_orders].each do |index, coffee|
-        order.coffee_orders.build(coffee)
+    Order.new(name: params[:name], pickup_time: params[:pickup_time]).tap do |order|
+      coffees = params[:coffee_orders]
+      if coffees
+        coffees.each do |index, coffee|
+          order.coffee_orders.build(coffee)
+        end
       end
     end
   end

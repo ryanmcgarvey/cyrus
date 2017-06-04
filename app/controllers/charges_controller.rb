@@ -19,6 +19,7 @@ class ChargesController < ActionController::API
 
     order_params = params.require(:order).permit(
       :name,
+      :pickup_time,
       coffee_orders: [
         :bean,
         :coffee_temperature,

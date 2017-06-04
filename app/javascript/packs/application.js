@@ -1,6 +1,4 @@
-import {$, jquery} from 'jquery';
-window.jQuery = jQuery
-window.$ = $
+import 'semantic-ui-calendar/dist/calendar.css'
 
 import App    from 'app';
 import WebpackerReact from 'webpacker-react'

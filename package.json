@@ -37,6 +37,7 @@
     "redux-devtools": "^3.4.0",
     "resolve-url-loader": "^2.0.2",
     "sass-loader": "^6.0.5",
+    "semantic-ui-calendar": "^0.0.8",
     "semantic-ui-react": "^0.68.3",
     "stripe": "^4.22.0",
     "style-loader": "^0.18.1",

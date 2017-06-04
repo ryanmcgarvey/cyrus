@@ -4075,6 +4075,10 @@ select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
 
+semantic-ui-calendar@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/semantic-ui-calendar/-/semantic-ui-calendar-0.0.8.tgz#ae16504e4d8016cac5ba9a00ad8ccd4a430de3ef"
+
 semantic-ui-react@^0.68.3:
   version "0.68.3"
   resolved "https://registry.yarnpkg.com/semantic-ui-react/-/semantic-ui-react-0.68.3.tgz#4caedb2cc307c80864d9bd55306b905de3b653e2"
