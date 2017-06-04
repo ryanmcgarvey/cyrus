@@ -1,3 +1,52 @@
 // Place all the styles related to the charges controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+[data-react-class="App"] {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  [data-reactroot] {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+html {
+  height: 100%;
+  display: flex;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.header {
+}
+
+.wrap {
+  height: 100%;
+  flex-flow: column;
+}
+
+.primary_action {
+  width: 100%;
+  align-self: flex-end;
+
+  button {
+    height: 120px;
+    font-size: 50px ! important;
+  }
+}
+

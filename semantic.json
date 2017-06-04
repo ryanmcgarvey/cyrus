@@ -1,0 +1,22 @@
+{
+  "base": "semantic/",
+  "paths": {
+    "source": {
+      "config": "src/theme.config",
+      "definitions": "src/definitions/",
+      "site": "src/site/",
+      "themes": "src/themes/"
+    },
+    "output": {
+      "packaged": "node_modules/semantic-ui/dist/",
+      "uncompressed": "node_modules/semantic-ui/dist/components/",
+      "compressed": "node_modules/semantic-ui/dist/components/",
+      "themes": "node_modules/semantic-ui/dist/themes/"
+    },
+    "clean": "node_modules/semantic-ui/dist/"
+  },
+  "permission": false,
+  "autoInstall": true,
+  "rtl": false,
+  "version": "2.2.10"
+}

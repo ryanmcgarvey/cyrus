@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Checkbox, Form, Input, Radio, Select, TextArea } from 'semantic-ui-react'
+import { Grid, Button, Checkbox, Form, Input, Radio, Select, TextArea } from 'semantic-ui-react'
 
 export default class Coffee extends React.Component {
 

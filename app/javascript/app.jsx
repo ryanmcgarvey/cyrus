@@ -1,11 +1,7 @@
 import React from 'react'
-import { Header, Container } from 'semantic-ui-react'
-
-import {CoffeeOrderForm, CoffeeOrderView} from 'coffee_order'
-
+import { Grid, Button, Step, Menu, Divider, Header, Segment, Container } from 'semantic-ui-react'
+import { CoffeeOrderForm, CoffeeOrderReview, CoffeeOrderConfig } from 'coffee_order'
 import Checkout from 'stripe_checkout'
-// import Checkout from 'checkout'
-// import FrameCheckout from 'frame_checkout'
 
 export default class App extends React.Component {
 
@@ -13,38 +9,24 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       order: {
-        name: '',
-        coffee_orders: [{}],
-        saved: false,
+        name: 'ryan',
+        coffee_orders: [{
+          bean: '',
+          coffee_temperature: '',
+          cream: '',
+          cream_temperature: ''
+        }],
+        step: 0,
       },
+
     };
 
     this.update_order = this.update_order.bind(this);
     this.save_coffee = this.save_coffee.bind(this);
+    this.configure_order = this.configure_order.bind(this);
     this.submit_order = this.submit_order.bind(this);
+    this.active_button = this.active_button.bind(this);
   }
-
-
-  update_order(order) {
-    this.setState({order: order});
-  }
-
-  save_coffee(){
-    let order = this.state.order;
-    order.saved = true;
-    this.setState({order: order});
-  }
-
-  reset_form(){
-    this.setState({
-      order: {
-        name: '',
-        coffee_orders: [{}],
-        saved: false,
-      },
-    });
-  }
-
 
   submit_order(token){
     this.submitting = true;
@@ -56,7 +38,6 @@ export default class App extends React.Component {
       data: { order: {name: order.name, coffee_orders: order.coffee_orders}, stripe: token},
       success: (response) => { 
         this.submitting = false; 
-        alert('Thanks for ordering!');
         this.reset_form();
       },
       error: (response) => { 
@@ -66,25 +47,79 @@ export default class App extends React.Component {
     } );
   }
 
+  update_order(order) {
+    this.setState({order: order});
+  }
+
+  configure_order(e){
+    e.preventDefault();
+    let order = this.state.order;
+    order.step = 1;
+    this.setState({order: order});
+  }
+
+  save_coffee(e){
+    e.preventDefault();
+    let order = this.state.order;
+    order.step = 2;
+    this.setState({order: order});
+  }
+
+  reset_form(){
+    this.setState({
+      order: {
+        name: '',
+        coffee_orders: [{}],
+        step: 0,
+      },
+    });
+  }
+
+  active_button() {
+  }
+
+
   render(){
     let order = this.state.order;
-    let style = {
-      "fontSize": "40px"
-    }
+    let step = order.step;
+
+    let buttons = [
+      <Button icon='arrow right' content='Next' fluid color='blue' size='massive' labelPosition='right' onClick={this.configure_order} />,
+      <Button icon='coffee' content='Order Coffees' fluid color='blue' size='massive' labelPosition='right' onClick={this.save_coffee} />,
+      <Checkout controller={this} config={this.props.config} >
+        <Button icon='dollar' content='Checkout' fluid color='green' size='massive' labelPosition='left' />
+      </Checkout>
+    ]
+
+    let steps = [
+      { completed: (step > 0), active: (step == 0), title: 'Configure', description: 'Tell us who is picking up the coffee' },
+      { completed: (step > 1), active: (step == 1), title: 'Order', description: 'Place your order' },
+      { completed: (step > 2), active: (step == 2), title: 'Pay', description: 'Verify order details' },
+    ]
+
+    let panels = [
+      (<CoffeeOrderConfig config={this.props.config} order={this.state.order} controller={this} />),
+      (<CoffeeOrderForm config={this.props.config} order={this.state.order} controller={this} />),
+      (<CoffeeOrderReview order={this.state.order} controller={this} />),
+    ]
 
     return(
-      <div>
-        <Header textAlign='center' as="h1">
-          New Coffee
-        </Header>
-        <Container>
-          <CoffeeOrderForm config={this.props.config} order={this.state.order} controller={this} />
-          { order.saved == true &&
-              <div>
-                <Checkout submit_order={this.submit_order} config={this.props.config} />
-              </div>
-          }
+      <div className='wrap'>
+
+        <Menu fluid className='header'>
+          <Header className='item' as="h2">
+            Cyrus
+          </Header>
+        </Menu>
+
+        <Container className='main'>
+          <Step.Group ordered fluid items={steps} />
+          { panels[step] }
         </Container>
+
+        <div className='primary_action'>
+          { buttons[step] }
+        </div>
       </div>
     )
   }

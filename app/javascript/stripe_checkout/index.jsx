@@ -1,5 +1,5 @@
 import React from 'react'
-import { Segment } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 import StripeCheckout from 'react-stripe-checkout';
 
 export default class Checkout extends React.Component {
@@ -7,14 +7,12 @@ export default class Checkout extends React.Component {
   constructor(props) {
     super(props);
     this.onToken = this.onToken.bind(this);
-    // this.onSuccess = this.onSuccess.bind(this);
   }
 
 
   onToken(token) {
-    this.props.submit_order(token);
+    this.props.controller.submit_order(token);
   }
-
 
   render(){
     let api_key = this.props.config.stripe_api_key;
@@ -37,7 +35,9 @@ export default class Checkout extends React.Component {
         // zipCode={false}
         allowRememberMe
         token={this.onToken}
-      />
+      >
+        {this.props.children}
+      </StripeCheckout>
     )
   }
 }
