@@ -112,10 +112,10 @@ export default class App extends React.Component {
           </Header>
         </Menu>
 
-        <Container className='main'>
+        <div className='main'>
           <Step.Group ordered fluid items={steps} />
           { panels[step] }
-        </Container>
+        </div>
 
         <div className='primary_action'>
           { buttons[step] }
