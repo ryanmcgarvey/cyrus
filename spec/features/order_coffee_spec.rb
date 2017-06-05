@@ -27,6 +27,19 @@ describe 'Order Coffee' do
 
     expect(page).to have_content "hot turkey with cold soy"
     expect(page).to have_content "cold brazil with soy"
+
+    click_button 'Checkout'
+
+    within_frame 'stripe_checkout_app' do
+      fill_in 'Card number', with: '4242424242424242'
+      fill_in 'MM / YY', with: '02/24'
+      fill_in 'CVC', with: '123'
+      click_button 'Money Please!'
+    end
+
+    wait_for do
+      expect(page).to have_content 'Thank you for your order'
+    end
   end
 
 end

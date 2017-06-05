@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Grid, Button, Step, Menu, Divider, Header, Segment, Container } from 'semantic-ui-react'
+import { Message, Grid, Button, Step, Menu, Divider, Header, Segment, Container } from 'semantic-ui-react'
 import { CoffeeOrderForm, CoffeeOrderReview, CoffeeOrderConfig } from 'coffee_order'
 import Checkout from 'stripe_checkout'
 
@@ -24,6 +24,7 @@ export default class App extends React.Component {
     this.submit_order = this.submit_order.bind(this);
     this.add_coffee = this.add_coffee.bind(this);
     this.remove_coffee = this.remove_coffee.bind(this);
+    this.reset_form = this.reset_form.bind(this);
   }
 
   submit_order(token){
@@ -44,7 +45,8 @@ export default class App extends React.Component {
       data: data,
       success: (response) => { 
         this.submitting = false; 
-        this.reset_form();
+        order.step = 3;
+        this.update_order(order);
       },
       error: (response) => { 
         this.submitting = false;  
@@ -105,7 +107,8 @@ export default class App extends React.Component {
       <Button icon='arrow right' content='Next' fluid color='blue' size='massive' labelPosition='right' onClick={this.configure_order} />,
       <Checkout controller={this} config={this.props.config} >
         <Button icon='dollar' content='Checkout' fluid color='green' size='massive' labelPosition='left' />
-      </Checkout>
+      </Checkout>,
+      <Button  content='Order Another' fluid color='blue' size='massive'  onClick={this.reset_form} />,
     ]
 
     let steps = [
@@ -118,6 +121,11 @@ export default class App extends React.Component {
       <CoffeeOrderForm config={this.props.config} order={this.state.order} controller={this} />,
       <CoffeeOrderConfig config={this.props.config} order={this.state.order} controller={this} />,
       <CoffeeOrderReview order={this.state.order} controller={this} />,
+      <Message color='green' >
+        <Message.Header>
+          Thank you for your order!
+        </Message.Header>
+      </Message>
     ]
 
     return(

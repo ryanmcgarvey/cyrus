@@ -4470,7 +4470,7 @@ module.exports = React;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__collections_Breadcrumb_BreadcrumbSection__ = __webpack_require__(344);
 /* unused harmony reexport BreadcrumbSection */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__collections_Form__ = __webpack_require__(786);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_8__collections_Form__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_8__collections_Form__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__collections_Form_FormButton__ = __webpack_require__(345);
 /* unused harmony reexport FormButton */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__collections_Form_FormCheckbox__ = __webpack_require__(346);
@@ -4496,7 +4496,7 @@ module.exports = React;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__collections_Grid_GridRow__ = __webpack_require__(354);
 /* unused harmony reexport GridRow */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__collections_Menu__ = __webpack_require__(790);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_21__collections_Menu__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_21__collections_Menu__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__collections_Menu_MenuHeader__ = __webpack_require__(355);
 /* unused harmony reexport MenuHeader */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__collections_Menu_MenuItem__ = __webpack_require__(356);
@@ -4504,7 +4504,7 @@ module.exports = React;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__collections_Menu_MenuMenu__ = __webpack_require__(357);
 /* unused harmony reexport MenuMenu */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__collections_Message__ = __webpack_require__(792);
-/* unused harmony reexport Message */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_25__collections_Message__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__collections_Message_MessageContent__ = __webpack_require__(358);
 /* unused harmony reexport MessageContent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__collections_Message_MessageHeader__ = __webpack_require__(359);
@@ -4536,13 +4536,13 @@ module.exports = React;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__elements_Button_ButtonOr__ = __webpack_require__(368);
 /* unused harmony reexport ButtonOr */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__elements_Container__ = __webpack_require__(796);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_41__elements_Container__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_41__elements_Container__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__elements_Divider__ = __webpack_require__(798);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_42__elements_Divider__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_42__elements_Divider__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__elements_Flag__ = __webpack_require__(369);
 /* unused harmony reexport Flag */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__elements_Header__ = __webpack_require__(801);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_44__elements_Header__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_44__elements_Header__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__elements_Header_HeaderContent__ = __webpack_require__(370);
 /* unused harmony reexport HeaderContent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__elements_Header_HeaderSubheader__ = __webpack_require__(371);
@@ -4558,7 +4558,7 @@ module.exports = React;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__elements_Input__ = __webpack_require__(208);
 /* unused harmony reexport Input */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__elements_Label__ = __webpack_require__(136);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_52__elements_Label__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_52__elements_Label__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__elements_Label_LabelDetail__ = __webpack_require__(375);
 /* unused harmony reexport LabelDetail */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__elements_Label_LabelGroup__ = __webpack_require__(376);
@@ -4586,11 +4586,11 @@ module.exports = React;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__elements_Reveal_RevealContent__ = __webpack_require__(379);
 /* unused harmony reexport RevealContent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__elements_Segment__ = __webpack_require__(812);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_66__elements_Segment__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_66__elements_Segment__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__elements_Segment_SegmentGroup__ = __webpack_require__(380);
 /* unused harmony reexport SegmentGroup */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_68__elements_Step__ = __webpack_require__(813);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_68__elements_Step__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_68__elements_Step__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_69__elements_Step_StepContent__ = __webpack_require__(382);
 /* unused harmony reexport StepContent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_70__elements_Step_StepDescription__ = __webpack_require__(212);
@@ -26775,6 +26775,7 @@ var App = function (_React$Component) {
     _this.submit_order = _this.submit_order.bind(_this);
     _this.add_coffee = _this.add_coffee.bind(_this);
     _this.remove_coffee = _this.remove_coffee.bind(_this);
+    _this.reset_form = _this.reset_form.bind(_this);
     return _this;
   }
 
@@ -26800,7 +26801,8 @@ var App = function (_React$Component) {
         data: data,
         success: function success(response) {
           _this2.submitting = false;
-          _this2.reset_form();
+          order.step = 3;
+          _this2.update_order(order);
         },
         error: function error(response) {
           _this2.submitting = false;
@@ -26866,28 +26868,36 @@ var App = function (_React$Component) {
         __WEBPACK_IMPORTED_MODULE_3_stripe_checkout__["a" /* default */],
         { controller: this, config: this.props.config },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["a" /* Button */], { icon: 'dollar', content: 'Checkout', fluid: true, color: 'green', size: 'massive', labelPosition: 'left' })
-      )];
+      ), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["a" /* Button */], { content: 'Order Another', fluid: true, color: 'blue', size: 'massive', onClick: this.reset_form })];
 
       var steps = [{ completed: step > 0, active: step == 0, title: 'Order' }, { completed: step > 1, active: step == 1, title: 'Prep' }, { completed: step > 2, active: step == 2, title: 'Pay' }];
 
-      var panels = [__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_coffee_order__["a" /* CoffeeOrderForm */], { config: this.props.config, order: this.state.order, controller: this }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_coffee_order__["b" /* CoffeeOrderConfig */], { config: this.props.config, order: this.state.order, controller: this }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_coffee_order__["c" /* CoffeeOrderReview */], { order: this.state.order, controller: this })];
+      var panels = [__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_coffee_order__["a" /* CoffeeOrderForm */], { config: this.props.config, order: this.state.order, controller: this }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_coffee_order__["b" /* CoffeeOrderConfig */], { config: this.props.config, order: this.state.order, controller: this }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_coffee_order__["c" /* CoffeeOrderReview */], { order: this.state.order, controller: this }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["b" /* Message */],
+        { color: 'green' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["b" /* Message */].Header,
+          null,
+          'Thank you for your order!'
+        )
+      )];
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'wrap' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["b" /* Menu */],
+          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["c" /* Menu */],
           { fluid: true, className: 'header' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["c" /* Header */],
+            __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["d" /* Header */],
             { className: 'item', as: 'h2' },
             'Cyrus'
           )
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["d" /* Container */],
+          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["e" /* Container */],
           { className: 'main' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["e" /* Step */].Group, { ordered: true, fluid: true, items: steps }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["f" /* Step */].Group, { ordered: true, fluid: true, items: steps }),
           panels[step]
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -27069,8 +27079,8 @@ var Coffee = function (_React$Component) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { key: 'select_' + f + '_for_coffee_' + index },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["g" /* Divider */], { hidden: true }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["f" /* Form */].Select, { fluid: true, size: 'massive', onChange: _this2.onChange, value: coffee[f] || '', name: f, placeholder: f, options: options[f] })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["h" /* Divider */], { hidden: true }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["g" /* Form */].Select, { fluid: true, size: 'massive', onChange: _this2.onChange, value: coffee[f] || '', name: f, placeholder: f, options: options[f] })
         );
       });
 
@@ -27079,7 +27089,7 @@ var Coffee = function (_React$Component) {
         { 'data-provides': 'coffee_order', 'data-for': index },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["a" /* Button */], { floated: 'right', negative: true, icon: 'trash', size: 'large', content: 'Delete', labelPosition: 'right', onClick: controller.remove_coffee, 'data-index': index }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["c" /* Header */],
+          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["d" /* Header */],
           { as: 'h2', textAlign: 'left' },
           'Item ',
           index + 1
@@ -27150,7 +27160,7 @@ var CoffeeOrderform = function (_React$Component) {
           'div',
           { key: 'coffee_' + i },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_coffee_order_coffee__["a" /* default */], { config: _this2.props.config, order: order, onChange: _this2.onChange, index: i, controller: _this2.props.controller }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["g" /* Divider */], { hidden: true })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["h" /* Divider */], { hidden: true })
         );
       });
 
@@ -27251,9 +27261,9 @@ var CoffeeOrderConfig = function (_React$Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["c" /* Header */], { as: 'h2', content: 'Pickup Time' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["d" /* Header */], { as: 'h2', content: 'Pickup Time' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["f" /* Form */].Field,
+          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["g" /* Form */].Field,
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
@@ -27266,8 +27276,8 @@ var CoffeeOrderConfig = function (_React$Component) {
             )
           )
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["g" /* Divider */], { hidden: true }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["f" /* Form */].Input, { fluid: true, size: 'massive', placeholder: 'Name', name: 'name', value: order.name, onChange: this.onChange })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["h" /* Divider */], { hidden: true }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["g" /* Form */].Input, { fluid: true, size: 'massive', placeholder: 'Name', name: 'name', value: order.name, onChange: this.onChange })
       );
     }
   }]);
@@ -27327,10 +27337,10 @@ var CoffeeOrderReview = function (_React$Component) {
         var cream_color = _this2.label_for_temp(coffee.cream_temperature);
 
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["h" /* Segment */],
+          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["i" /* Segment */],
           { key: 'coffee_view_' + i },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["i" /* Label */],
+            __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["j" /* Label */],
             { color: coffee_color },
             coffee.coffee_temperature,
             ' ',
@@ -27342,7 +27352,7 @@ var CoffeeOrderReview = function (_React$Component) {
             ' with '
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["i" /* Label */],
+            __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["j" /* Label */],
             { color: cream_color },
             coffee.cream_temperature,
             ' ',
@@ -27355,7 +27365,7 @@ var CoffeeOrderReview = function (_React$Component) {
         'div',
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["c" /* Header */],
+          __WEBPACK_IMPORTED_MODULE_1_semantic_ui_react__["d" /* Header */],
           { as: 'h1' },
           order.name,
           ' @ ',
@@ -69021,7 +69031,7 @@ Message.Content = __WEBPACK_IMPORTED_MODULE_12__MessageContent__["a" /* default 
 Message.Header = __WEBPACK_IMPORTED_MODULE_13__MessageHeader__["a" /* default */];
 Message.List = __WEBPACK_IMPORTED_MODULE_14__MessageList__["a" /* default */];
 Message.Item = __WEBPACK_IMPORTED_MODULE_15__MessageItem__["a" /* default */];
-/* unused harmony default export */ var _unused_webpack_default_export = (Message);
+/* harmony default export */ __webpack_exports__["a"] = (Message);
  true ? Message.propTypes = {
   /** An element type to render as (string or function). */
   as: __WEBPACK_IMPORTED_MODULE_10__lib__["e" /* customPropTypes */].as,
@@ -69100,7 +69110,7 @@ Message.handledProps = ['as', 'attached', 'children', 'className', 'color', 'com
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Message__ = __webpack_require__(791);
-/* unused harmony reexport default */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__Message__["a"]; });
 
 
 
