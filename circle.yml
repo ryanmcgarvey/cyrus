@@ -3,3 +3,7 @@ dependencies:
     - curl -s https://raw.githubusercontent.com/chronogolf/circleci-google-chrome/master/use_chrome_stable_version.sh | bash
     - gem install bundler
     - yarn install --ignore-engines
+test:
+  override:
+    - RAILS_ENV=test bundle exec rspec --require rails_helper
+
