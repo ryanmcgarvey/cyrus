@@ -32,7 +32,7 @@ export default class Coffee extends React.Component {
     );
 
     return(
-      <div>
+      <div data-provides="coffee_order" data-for={index} >
         <Button floated='right' negative icon='trash' size='large' content='Delete' labelPosition='right' onClick={controller.remove_coffee} data-index={index}/> 
         <Header as='h2' textAlign='left' >
           Item {index + 1}

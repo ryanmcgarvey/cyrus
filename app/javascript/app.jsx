@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Grid, Button, Step, Menu, Divider, Header, Segment, Container } from 'semantic-ui-react'
 import { CoffeeOrderForm, CoffeeOrderReview, CoffeeOrderConfig } from 'coffee_order'
 import Checkout from 'stripe_checkout'
@@ -10,6 +11,7 @@ export default class App extends React.Component {
     this.state = {
       order: {
         name: '',
+        pickup_time: new Date(),
         coffee_orders: [],
         step: 0,
       },

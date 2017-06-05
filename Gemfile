@@ -26,16 +26,11 @@ gem 'foreman'
 gem 'stripe'
 gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
 
-
-
 group :development, :test do
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
-
   gem 'pry'
   gem 'pry-remote'
   gem 'figaro'
-  gem 'rspec'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -45,6 +40,15 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-commands-rspec'
+end
+
+group :test do
+  gem 'capybara'
+  # gem 'capybara-screenshot'
+  gem 'selenium-webdriver'
+
+  gem "chromedriver-helper"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

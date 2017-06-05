@@ -15,6 +15,7 @@ const extensionGlob = `**/*{${settings.extensions.join(',')}}*`
 const entryPath = join(settings.source_path, settings.source_entry_path)
 const packPaths = sync(join(entryPath, extensionGlob))
 
+
 module.exports = {
   entry: packPaths.reduce(
     (map, entry) => {
