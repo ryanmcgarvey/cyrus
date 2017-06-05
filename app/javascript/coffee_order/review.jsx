@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header, Segment, Label } from 'semantic-ui-react'
 
-export default class CoffeeOrderReview extends React.Component {
+export default class Review extends React.Component {
 
   label_for_temp(temp) {
     switch(temp){

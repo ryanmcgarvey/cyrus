@@ -1,8 +1,9 @@
 import React from 'react'
 import { Grid, Divider, Segment, Container, Header, Button, Checkbox, Form, Input, Radio, Select, TextArea } from 'semantic-ui-react'
+
 import Coffee from 'coffee_order/coffee'
 
-export default class CoffeeOrderform extends React.Component {
+export default class Orderform extends React.Component {
 
   constructor(props){
     super(props);
@@ -44,10 +45,3 @@ export default class CoffeeOrderform extends React.Component {
     )
   }
 }
-
-export {
-  CoffeeOrderConfig,
-  CoffeeOrderForm,
-  CoffeeOrderReview
-}
-
