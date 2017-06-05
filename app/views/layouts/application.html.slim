@@ -11,5 +11,13 @@ html lang=I18n.locale xmlns="http://www.w3.org/1999/xhtml"
     / = stylesheet_pack_tag 'application'
     = stylesheet_link_tag 'application', media: 'all'
   body
+    .ui.menu.fluid.header
+      h2.ui.header.item
+        |Cyrus
+      .ui.item
+        = link_to 'New Order', new_order_path
+      .ui.item
+        = link_to 'Orders', orders_path
+
     = yield
 

@@ -12,5 +12,9 @@ class CoffeeOrder < ApplicationRecord
   enumerize :size, in: SIZES
 
   belongs_to :order
+
+  def for_table
+    "#{size.try(:text)} #{coffee_temperature.try(:text)} #{bean.try(:text)} #{cream_temperature.try(:text)} #{cream.try(:text)}"
+  end
 end
 

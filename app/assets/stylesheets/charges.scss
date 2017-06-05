@@ -39,8 +39,8 @@ body {
 }
 
 .wrap {
-  height: 100%;
   flex-flow: column;
+  flex: 1;
 }
 
 .primary_action {

@@ -1,0 +1,24 @@
+.ui.container
+  table.ui.celled.table
+    thead
+      tr
+        th Name
+        th Pickup 
+        th Order 
+        th
+    tbody
+      - @orders.each do |order|
+        tr
+          td=order.name
+          td=order.pickup_time.strftime("%A %l:%M %p") 
+          td
+            ul.ui.list
+              - order.coffee_orders.each do |c|
+                .ui.item
+                  i.icon.coffee
+                  .ui.content
+                    = c.for_table
+          td
+            = link_to order_path(order), method: :delete do
+              button.ui.compact.icon.button.negative.small
+                i.trash.icon
