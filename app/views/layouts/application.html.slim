@@ -11,8 +11,8 @@ html lang=I18n.locale xmlns="http://www.w3.org/1999/xhtml"
     meta name="google-signin-scope" content="profile email"
     meta name="google-signin-client_id" content= Rails.configuration.google_client_id 
     script src="https://apis.google.com/js/platform.js" async=true defer=true
+    / = render 'sdks'
   body
-    = render 'sdks'
     = render 'header'
     = render 'messages'
 

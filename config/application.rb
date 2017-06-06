@@ -9,6 +9,6 @@ Bundler.require(*Rails.groups)
 module Coffee
   class Application < Rails::Application
     config.load_defaults 5.1
-    config.google_client_id = ENV['GOOGLE_OAUTH_CLIENT_ID']
+    config.google_client_id = ENV['GOOGLE_CLIENT_ID']
   end
 end

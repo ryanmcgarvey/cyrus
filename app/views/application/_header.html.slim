@@ -6,12 +6,15 @@
   .ui.item
     = link_to 'Orders', orders_path
   .right.menu
-    .ui.item
-      .g-signin2 data-onsuccess="onSignIn" data-theme="dark"
-    .ui.item
-      - if user_signed_in?
+    - if user_signed_in?
+      .ui.item
         = link_to 'Sign out', destroy_user_session_path, method: :delete
-      - else
+    - else
+      .ui.item
+        = link_to user_google_oauth2_omniauth_authorize_path do
+          .ui.button.yellow.google_login
+            |Sign in with Google
+      .ui.item
         = link_to 'Sign in', new_user_session_path
     .ui.item
       = link_to 'Sign up', new_user_registration_path

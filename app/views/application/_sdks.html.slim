@@ -1,16 +1,40 @@
 javascript:
-  function onSignIn(googleUser) {
-    // Useful data for your client-side scripts:
-    var profile = googleUser.getBasicProfile();
+  // Basic hybrid auth example following the pattern at:
+  // https://developers.google.com/api-client-library/javascript/features/authentication#Authexample
+  jQuery(function() {
+    return $.ajax({
+      url: 'https://apis.google.com/js/client:plus.js?onload=gpAsyncInit',
+      dataType: 'script',
+      cache: true
+    });
+  });
 
-    console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-    console.log('Full Name: ' + profile.getName());
-    console.log('Given Name: ' + profile.getGivenName());
-    console.log('Family Name: ' + profile.getFamilyName());
-    console.log("Image URL: " + profile.getImageUrl());
-    console.log("Email: " + profile.getEmail());
+  window.gpAsyncInit = function() {
 
-    // The ID token you need to pass to your backend:
-    var id_token = googleUser.getAuthResponse().id_token;
-    console.log("ID Token: " + id_token);
+    $('.google_login').click(function(e) {
+      e.preventDefault();
+
+      gapi.auth.authorize({
+        immediate: false,
+        response_type: 'code',
+        cookie_policy: 'single_host_origin',
+        client_id: "#{Rails.configuration.google_client_id}",
+        scope: 'email profile'
+      }, function(response) {
+        if (response && !response.error) {
+          // google authentication succeed, now post data to server.
+          jQuery.ajax({
+            type: 'POST', 
+            url: '/users/auth/google_oauth2/callback', 
+            data: response,
+            beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+            success: function(data) {
+              // response from server
+            }
+          });
+        } else {
+          alert('Sign in failed');
+        }
+      });
+    });
   };
