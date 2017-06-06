@@ -23,7 +23,8 @@ gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
 gem 'devise'
 gem 'omniauth-google-oauth2'
 
-gem 'solidus', github: 'solidusio/solidus'
+# gem 'solidus', github: 'solidusio/solidus'
+gem 'solidus', git: 'https://github.com/jhawthorn/solidus.git', branch: 'rails_5_1'
 gem 'solidus_auth_devise'
 
 group :development, :test do
