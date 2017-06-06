@@ -1,0 +1,13 @@
+.mobile_container
+  - if notice
+    .ui.message
+      i.close.icon
+      .header
+        = notice
+  - if alert 
+    .ui.message.negative
+      i.close.icon
+      .header
+        = alert
+      
+.ui.divider.hidden

@@ -135,10 +135,10 @@ export default class CoffeeOrder extends React.Component {
 
     return(
       <div className='wrap'>
-        <Container className='main'>
+        <div className='main mobile_container'>
           <Step.Group ordered fluid items={steps} />
           { panels[step] }
-        </Container>
+        </div>
 
         <div className='primary_action'>
           { buttons[step] }

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  protect_from_forgery with: :exception, prepend: true
+
 
   def options_for(klass, methods)
     {}.tap do |options|
