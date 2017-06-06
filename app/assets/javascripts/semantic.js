@@ -1,4 +1,4 @@
-$( () => {
+$(function() {
   $('.message .close')
     .on('click', function() {
       $(this)
