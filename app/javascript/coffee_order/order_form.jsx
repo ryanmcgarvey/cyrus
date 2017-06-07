@@ -30,16 +30,19 @@ export default class Orderform extends React.Component {
     });
 
     let new_coffee_buttons = (
-      <Button.Group fluid size='massive' >
-        <Button onClick={controller.add_coffee} data-size="small"  content='Small'  />
-        <Button onClick={controller.add_coffee} data-size="medium" content='Medium' />
-        <Button onClick={controller.add_coffee} data-size="large"  content='Large'  />
+      <Button.Group fluid size='huge' className='tall' >
+        <Button onClick={controller.add_coffee("small")} content='Small'   />
+        <Button onClick={controller.add_coffee("medium")} content='Medium' />
+        <Button onClick={controller.add_coffee("large")} content='Large'  />
       </Button.Group>
     )
 
     return(
       <div>
         {coffees}
+        <Header as='h2' textAlign='center'>
+          Add to order
+        </Header>
         {new_coffee_buttons}
       </div>
     )

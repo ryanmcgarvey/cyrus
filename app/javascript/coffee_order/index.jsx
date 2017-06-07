@@ -107,11 +107,12 @@ export default class CoffeeOrder extends React.Component {
     this.update_order(order);
   }
 
-  add_coffee(e) {
-    let size = e.target.dataset.size;
-    let order = this.state.order;
-    order.coffee_orders.push({size: size});
-    this.update_order(order);
+  add_coffee(size) {
+    return () => {
+      let order = this.state.order;
+      order.coffee_orders.push({size: size});
+      this.update_order(order);
+    }
   }
 
   change_step(step) {
@@ -123,7 +124,6 @@ export default class CoffeeOrder extends React.Component {
       }
     }
   }
-
 
   render(){
     let order = this.state.order;

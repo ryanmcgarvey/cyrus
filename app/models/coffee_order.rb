@@ -1,7 +1,7 @@
 class CoffeeOrder < ApplicationRecord
   BEANS = %w|brazil new_zealand zimbabwe indonesia turkey hawaii|
   TEMPERATURES = %w|cold hot|
-  CREAMS = %w|black soy almond coconut skim one two whole half_and_half|
+  CREAMS = %w|soy almond coconut skim one two whole half_and_half|
   SIZES = %w|small medium large|
 
   extend Enumerize
