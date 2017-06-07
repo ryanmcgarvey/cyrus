@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :orders
   end
 
-  resources :orders
+  resources :orders do
+    get 'reorder'
+  end
   root to: "orders#new"
 end

@@ -5,6 +5,7 @@
         th Name
         th Pickup 
         th Order 
+        th
     tbody
       - @orders.each do |order|
         tr
@@ -17,3 +18,8 @@
                   i.icon.coffee
                   .ui.content
                     = c.for_table
+          td
+            = link_to order_reorder_path(order) do
+              .ui.button.blue
+                i.icon.refresh
+
