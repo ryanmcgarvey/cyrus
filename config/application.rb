@@ -10,5 +10,6 @@ module Coffee
   class Application < Rails::Application
     config.load_defaults 5.1
     config.google_client_id = ENV['GOOGLE_CLIENT_ID']
+    config.autoload_paths << Rails.root.join('app/components')
   end
 end

@@ -44,10 +44,11 @@ export default class CoffeeOrder extends React.Component {
     };
 
     $.ajax( {
-      url: this.props.config.charges_url,
+      url: this.props.config.orders_url,
       type: 'POST',
       dataType: 'JSON',
       data: data,
+      beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
       success: (response) => { 
         this.submitting = false; 
         order.step = 3;
@@ -134,8 +135,8 @@ export default class CoffeeOrder extends React.Component {
     ]
 
     return(
-      <div className='wrap'>
-        <div className='main mobile_container'>
+      <div className='expand'>
+        <div className='main container--mobile'>
           <Step.Group ordered fluid items={steps} />
           { panels[step] }
         </div>

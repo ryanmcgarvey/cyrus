@@ -13,39 +13,6 @@
   }
 }
 
-html {
-  height: 100%;
-  display: flex;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex: 1 0 auto;
-  flex-flow: column;
-  height: 100%;
-  width: 100%;
-}
-
-.main {
-  flex-grow: 1;
-}
-
-.mobile_container {
-  width: auto;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-.header {
-}
-
-.wrap {
-  flex-flow: column;
-  flex: 1;
-}
-
 .primary_action {
   width: 100%;
   align-self: flex-end;

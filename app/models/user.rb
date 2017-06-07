@@ -17,4 +17,5 @@ class User < ApplicationRecord
       User.create( email: data['email'], password: Devise.friendly_token[0,20])
   end
 
+  has_many :orders
 end

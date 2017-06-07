@@ -1,5 +1,6 @@
 class Order < ApplicationRecord
   has_many :coffee_orders
+  belongs_to :user
 
   after_initialize :init
 
@@ -13,16 +14,10 @@ class Order < ApplicationRecord
     super.merge(coffee_orders: coffee_orders.map(&:as_json))
   end
 
-  def self.from_params(params)
-    Order.new(name: params[:name], pickup_time: params[:pickup_time]).tap do |order|
-      coffees = params[:coffee_orders]
-      if coffees
-        coffees.each do |index, coffee|
-          order.coffee_orders.build(coffee)
-        end
-      end
-    end
+  def amount
+    1000
   end
+
 
 end
 
