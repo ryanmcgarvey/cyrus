@@ -11,10 +11,12 @@ import Checkout from 'stripe_checkout'
 export default class CoffeeOrder extends React.Component {
 
   constructor(props) {
+    let config = props.config;
+    let user_info = config.user_info;
     super(props);
     this.state = {
       order: {
-        name: '',
+        name: user_info.pickup_name,
         pickup_time: new Date(),
         coffee_orders: [],
         step: 0,
