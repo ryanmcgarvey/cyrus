@@ -33,17 +33,19 @@ export default class Config extends React.Component {
     let controller = this.props.controller;
 
     return(
-      <div>
-        <Header as='h2' content='Pickup Time' />
-        <Form.Field>
-          <div className='ui calendar' ref='calendar'>
-            <div className="ui input left icon">
-              <i className="calendar icon" />
-              <input type="text" placeholder="Date/Time" name='pickup_time' />
+      <div className='expand'>
+        <div>
+          <Header as='h2' content='Pickup Time' />
+          <Form.Field>
+            <div className='ui calendar' ref='calendar'>
+              <div className="ui input left icon">
+                <i className="calendar icon" />
+                <input type="text" placeholder="Date/Time" name='pickup_time' />
+              </div>
             </div>
-          </div>
-        </Form.Field>
-        <Divider hidden />
+          </Form.Field>
+        </div>
+
         <Form.Input fluid size='massive' placeholder='Name' name='name' value={order.name} onChange={this.onChange} />
       </div>
     )

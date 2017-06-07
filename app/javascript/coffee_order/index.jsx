@@ -146,7 +146,7 @@ export default class CoffeeOrder extends React.Component {
     let panels = [
       <OrderForm config={config} order={this.state.order} controller={this} />,
       <Config config={config} order={this.state.order} controller={this} />,
-      <Review order={this.state.order} controller={this} />,
+      <Review order={this.state.order} controller={this} config={config} />,
       <Message color='green' >
         <Message.Header>
           Thank you for your order!
