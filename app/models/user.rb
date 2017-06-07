@@ -35,7 +35,8 @@ class User < ApplicationRecord
       pickup_name: pickup_name,
       first_name:  first_name,
       last_name:   last_name,
-      avatar_url:  avatar_url
+      avatar_url:  avatar_url,
+      email:       email
     }
   end
 end

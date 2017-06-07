@@ -19,12 +19,12 @@ export default class CoffeeOrder extends React.Component {
 
     this.state = {
       order: {
-        name: user_info.pickup_name,
+        name: order.name,
         pickup_time: new Date(),
         coffee_orders: order.coffee_orders,
         step: 0,
+        amount: 1000,
       },
-
     };
 
     this.update_order = this.update_order.bind(this);
@@ -85,11 +85,16 @@ export default class CoffeeOrder extends React.Component {
   }
 
   reset_form(){
+    let config = this.props.config;
+    let order = this.state.order;
+    
     this.setState({
       order: {
-        name: '',
-        coffee_orders: [],
+        name: order.name,
+        pickup_time: new Date(),
+        coffee_orders: order.coffee_orders,
         step: 0,
+        amount: 1000,
       },
     });
   }
@@ -116,7 +121,7 @@ export default class CoffeeOrder extends React.Component {
     let buttons = [
       <Button icon='arrow right' content='Next' fluid color='blue' size='massive' labelPosition='right' onClick={this.save_coffee} />,
       <Button icon='arrow right' content='Next' fluid color='blue' size='massive' labelPosition='right' onClick={this.configure_order} />,
-      <Checkout controller={this} config={this.props.config} >
+      <Checkout controller={this} config={this.props.config} amount={order.amount} >
         <Button icon='dollar' content='Checkout' fluid color='green' size='massive' labelPosition='left' />
       </Checkout>,
       <Button  content='Order Another' fluid color='blue' size='massive'  onClick={this.reset_form} />,

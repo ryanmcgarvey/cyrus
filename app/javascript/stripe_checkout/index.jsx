@@ -16,23 +16,19 @@ export default class Checkout extends React.Component {
 
   render(){
     let api_key = this.props.config.stripe_api_key;
-    let amount = 1000;
-    let email = "info@example.co"
+    let email = this.props.config.user_info.email;
+    let amount = this.props.amount;
 
     return(
       <StripeCheckout
         name="Cyrus"
-        description="Description"
         image="http://static1.squarespace.com/static/55fafe1fe4b0ce4699686176/t/56884c77a2bab8527377b5cf/1451769815094/"
         ComponentClass="div"
-        panelLabel="Money Please!"
+        panelLabel="Complete Payment"
         amount={amount}
         currency="USD"
         stripeKey={api_key}
         email={email}
-        // shippingAddress
-        // billingAddress={false}
-        // zipCode={false}
         allowRememberMe
         token={this.onToken}
       >
