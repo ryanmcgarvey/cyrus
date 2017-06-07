@@ -22,7 +22,8 @@
     - else
       .ui.item
         = link_to user_google_oauth2_omniauth_authorize_path do
-          .ui.button.yellow.google_login
+          .ui.google.plus.button
+            i.google.icon
             |Sign in with Google
       .ui.item
         = link_to 'Sign in', new_user_session_path
