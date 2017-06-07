@@ -30,6 +30,10 @@ class User < ApplicationRecord
 
   has_many :orders
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
   def data
     {
       pickup_name: pickup_name,

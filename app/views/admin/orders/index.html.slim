@@ -9,7 +9,10 @@
     tbody
       - @orders.each do |order|
         tr
-          td=order.name
+          - if current_user
+            td= render "users/pickup_card", user: current_user, pickup_name: order.name
+          - else
+            td= order.name
           td=order.pickup_time.strftime("%A %l:%M %p") 
           td
             ul.ui.list
