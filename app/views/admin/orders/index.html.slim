@@ -8,11 +8,19 @@
         th
     tbody
       - @orders.each do |order|
+        - user = order.user
         tr
-          - if current_user
-            td= render "users/pickup_card", user: current_user, pickup_name: order.name
+          - if user
+            td
+              h4.ui.image.header
+                =image_tag user.avatar_url, class: 'ui mini rounded image'
+                .content
+                  =user.full_name
+                  .sub.header
+                    = order.name
           - else
-            td= order.name
+            td
+              = order.name
           td=order.pickup_time.strftime("%A %l:%M %p") 
           td
             ul.ui.list
