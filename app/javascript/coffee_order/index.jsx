@@ -34,6 +34,7 @@ export default class CoffeeOrder extends React.Component {
     this.add_coffee = this.add_coffee.bind(this);
     this.remove_coffee = this.remove_coffee.bind(this);
     this.reset_form = this.reset_form.bind(this);
+    this.change_step = this.change_step.bind(this);
   }
 
   submit_order(token){
@@ -87,7 +88,7 @@ export default class CoffeeOrder extends React.Component {
   reset_form(){
     let config = this.props.config;
     let order = this.state.order;
-    
+
     this.setState({
       order: {
         name: order.name,
@@ -113,6 +114,16 @@ export default class CoffeeOrder extends React.Component {
     this.update_order(order);
   }
 
+  change_step(step) {
+    return () => {
+      let order = this.state.order;
+      if(step < order.step){
+        order.step = step;
+        this.setState({order: order});
+      }
+    }
+  }
+
 
   render(){
     let order = this.state.order;
@@ -128,9 +139,9 @@ export default class CoffeeOrder extends React.Component {
     ]
 
     let steps = [
-      { completed: (step > 0), active: (step == 0), title: 'Order'},
-      { completed: (step > 1), active: (step == 1), title: 'Prep'},
-      { completed: (step > 2), active: (step == 2), title: 'Pay'},
+      { completed: (step > 0), active: (step == 0), title: 'Order', icon: 'coffee', onClick: this.change_step(0) },
+      { completed: (step > 1), active: (step == 1), title: 'Prep' , icon: 'user', onClick: this.change_step(1) },
+      { completed: (step > 2), active: (step == 2), title: 'Pay'  , icon: 'dollar', onClick: this.change_step(2) },
     ]
 
     let panels = [
@@ -147,7 +158,7 @@ export default class CoffeeOrder extends React.Component {
     return(
       <div className='expand'>
         <div className='main container--mobile'>
-          <Step.Group ordered fluid items={steps} />
+          <Step.Group fluid items={steps} />
           { panels[step] }
         </div>
 
