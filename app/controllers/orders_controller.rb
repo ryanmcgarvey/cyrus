@@ -31,14 +31,6 @@ class OrdersController < ApplicationController
     Orders::WithStripe.new(stripe_params, order_params, current_user).execute!
   end
 
-  def index
-    @orders = Order.all.order('pickup_time desc').where('pickup_time is not null')
-  end
-
-  def destroy
-    Order.find(params[:id]).destroy
-    redirect_to orders_path
-  end
 end
 
 

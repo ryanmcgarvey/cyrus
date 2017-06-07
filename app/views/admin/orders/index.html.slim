@@ -5,7 +5,6 @@
         th Name
         th Pickup 
         th Order 
-        th
     tbody
       - @orders.each do |order|
         tr
@@ -22,3 +21,4 @@
             = link_to order_path(order), method: :delete do
               button.ui.compact.icon.button.negative.small
                 i.trash.icon
+

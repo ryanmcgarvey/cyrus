@@ -1,0 +1,19 @@
+.ui.container
+  table.ui.celled.table
+    thead
+      tr
+        th Name
+        th Pickup 
+        th Order 
+    tbody
+      - @orders.each do |order|
+        tr
+          td=order.name
+          td=order.pickup_time.strftime("%A %l:%M %p") 
+          td
+            ul.ui.list
+              - order.coffee_orders.each do |c|
+                .ui.item
+                  i.icon.coffee
+                  .ui.content
+                    = c.for_table
