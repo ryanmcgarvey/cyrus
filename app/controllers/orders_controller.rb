@@ -1,8 +1,7 @@
 class OrdersController < ApplicationController
 
   def new
-    options = options_for(
-      CoffeeOrder,
+    options = options_for(CoffeeOrder,
       %i|bean coffee_temperature cream cream_temperature size|
     )
 
@@ -10,6 +9,7 @@ class OrdersController < ApplicationController
       orders_url: orders_path,
       stripe_api_key: Rails.configuration.stripe[:publishable_key],
       options: options,
+      user_info: current_user.try(:data) || {}
     }
   end
 

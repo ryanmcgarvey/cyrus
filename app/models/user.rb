@@ -11,11 +11,31 @@ class User < ApplicationRecord
 
   def self.from_omniauth(access_token)
     data = access_token.info
-    user = User.where(email: data['email']).first
+    user = User.find_by(
+      email: data['email']
+    )
 
     user ||=
-      User.create( email: data['email'], password: Devise.friendly_token[0,20])
+      User.new(email: data['email'],
+                  password: Devise.friendly_token[0,20])
+
+    user.pickup_name = data.name
+    user.first_name  = data.first_name
+    user.last_name   = data.last_name
+    user.avatar_url  = data.image
+
+    user.save!
+    user
   end
 
   has_many :orders
+
+  def data
+    {
+      pickup_name: pickup_name,
+      first_name:  first_name,
+      last_name:   last_name,
+      avatar_url:  avatar_url
+    }
+  end
 end

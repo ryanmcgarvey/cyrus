@@ -1,7 +1,6 @@
 module Orders
   class WithStripe < Struct.new(:stripe_params, :order_params, :user)
     def execute!
-
       order = Order.new(
         name: order_params[:name],
         pickup_time: order_params[:pickup_time],
