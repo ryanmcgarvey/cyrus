@@ -7,10 +7,6 @@ export default class Coffee extends React.Component {
     super(props);
     this.onChange = this.onChange.bind(this);
     this.buttons_for = this.buttons_for.bind(this);
-    this.coffee = this.coffee.bind(this);
-  }
-
-  coffee(){
   }
 
   onChange(e, data){
@@ -29,8 +25,20 @@ export default class Coffee extends React.Component {
 
     let buttons = options.map((option) => {
       let active = coffee[field] == option.value;
+
       return(
-        <Button compact className='tall' toggle size='huge' name={field} value={option.value} active={active} toggle onClick={this.onChange} key={`button_${option.value}_${field}_for_coffee_${index}`}  >
+        <Button
+          compact
+          className='tall'
+          toggle
+          size='huge' 
+          name={field} 
+          value={option.value} 
+          active={active} 
+          toggle 
+          onClick={this.onChange} 
+          key={`button_${option.value}_${field}_for_coffee_${index}`}
+        >
           {option.text}
         </Button>
       )
@@ -60,11 +68,6 @@ export default class Coffee extends React.Component {
 
     return(
       <div data-provides="coffee_order" data-for={index} >
-        <Button floated='right' negative icon='trash' size='large' content='Delete' labelPosition='right' onClick={controller.remove_coffee} data-index={index}/> 
-        <Header as='h2' textAlign='left' >
-          Item {index + 1}
-        </Header>
-
         {selects[0]}
 
         <Header as='h4'>

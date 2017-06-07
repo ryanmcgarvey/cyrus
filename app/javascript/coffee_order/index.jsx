@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Message, Grid, Button, Step, Menu, Divider, Header, Segment, Container } from 'semantic-ui-react'
 
-import Config from 'coffee_order/config'
+import Config    from 'coffee_order/config'
 import OrderForm from 'coffee_order/order_form'
-import Review from 'coffee_order/review'
+import Review    from 'coffee_order/review'
 
 import Checkout from 'stripe_checkout'
 
@@ -108,11 +108,9 @@ export default class CoffeeOrder extends React.Component {
   }
 
   add_coffee(size) {
-    return () => {
-      let order = this.state.order;
-      order.coffee_orders.push({size: size});
-      this.update_order(order);
-    }
+    let order = this.state.order;
+    order.coffee_orders.push({size: size});
+    this.update_order(order);
   }
 
   change_step(step) {
@@ -128,11 +126,12 @@ export default class CoffeeOrder extends React.Component {
   render(){
     let order = this.state.order;
     let step = order.step;
+    let config = this.props.config;
 
     let buttons = [
       <Button icon='arrow right' content='Next' fluid color='blue' size='massive' labelPosition='right' onClick={this.save_coffee} />,
       <Button icon='arrow right' content='Next' fluid color='blue' size='massive' labelPosition='right' onClick={this.configure_order} />,
-      <Checkout controller={this} config={this.props.config} amount={order.amount} >
+      <Checkout controller={this} config={config} amount={order.amount} >
         <Button icon='dollar' content='Checkout' fluid color='green' size='massive' labelPosition='left' />
       </Checkout>,
       <Button  content='Order Another' fluid color='blue' size='massive'  onClick={this.reset_form} />,
@@ -145,8 +144,8 @@ export default class CoffeeOrder extends React.Component {
     ]
 
     let panels = [
-      <OrderForm config={this.props.config} order={this.state.order} controller={this} />,
-      <Config config={this.props.config} order={this.state.order} controller={this} />,
+      <OrderForm config={config} order={this.state.order} controller={this} />,
+      <Config config={config} order={this.state.order} controller={this} />,
       <Review order={this.state.order} controller={this} />,
       <Message color='green' >
         <Message.Header>
@@ -157,7 +156,7 @@ export default class CoffeeOrder extends React.Component {
 
     return(
       <div className='expand'>
-        <div className='main container--mobile'>
+        <div className='expand container--mobile'>
           <Step.Group fluid items={steps} />
           { panels[step] }
         </div>

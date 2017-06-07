@@ -13,17 +13,21 @@ body {
   width: 100%;
 }
 
-.main {
-  flex-grow: 1;
-}
-
 .container--mobile {
   width: auto;
   margin-left: 1em;
   margin-right: 1em;
+
+  .primary_action  {
+    // margin-bottom: 40px;
+  }
 }
 
 .expand {
+  display: flex;
+  flex: 1 0 auto;
   flex-flow: column;
-  flex: 1;
+  justify-content: space-around;
 }
+
+
