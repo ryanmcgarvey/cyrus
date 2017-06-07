@@ -48,7 +48,7 @@ export default class CoffeeSummary extends React.Component {
     let cream_temperature  = this.text_for_value('cream_temperature', coffee.cream_temperature); 
 
     return(
-      <span>
+      <span onClick={this.props.change_index}>
         <Label color='yellow'>
           {this.label_for_size(coffee.size)}
         </Label>

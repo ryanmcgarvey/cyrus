@@ -76,7 +76,7 @@ export default class Orderform extends React.Component {
     let coffee_summaries = order.coffee_orders.map((coffee, index) =>
       <List.Item key={`coffee_${index}`} > 
         <Button floated='right' negative icon='trash' content='Delete' labelPosition='right' onClick={controller.remove_coffee} data-index={index}/> 
-        <CoffeeSummary coffee={coffee} config={config} onClick={this.change_index(index)}  />
+        <CoffeeSummary coffee={coffee} config={config} change_index={this.change_index(index)}  />
       </List.Item>
     )
 
@@ -87,7 +87,7 @@ export default class Orderform extends React.Component {
     )
 
     return(
-      <div className='expand'>
+      <div className='expand around'>
         <div>
           {order_summary}
         </div>
