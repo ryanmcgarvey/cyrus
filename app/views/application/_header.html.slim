@@ -3,10 +3,11 @@
     |Cyrus
   .ui.item
     = link_to 'New Order', new_order_path
-  .ui.item
-    = link_to 'Admin Orders', admin_orders_path
-  .ui.item
-    = link_to 'Orders', customer_orders_path
+  - if user_signed_in?
+    .ui.item
+      = link_to 'Admin Orders', admin_orders_path
+    .ui.item
+      = link_to 'Orders', customer_orders_path
   .right.menu
     - if user_signed_in?
       .ui.item
