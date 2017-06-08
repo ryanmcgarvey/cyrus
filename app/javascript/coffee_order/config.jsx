@@ -34,6 +34,7 @@ export default class Config extends React.Component {
 
     return(
       <div className='expand'>
+
         <div>
           <Header as='h2' content='Pickup Time' />
           <Form.Field>
@@ -46,7 +47,11 @@ export default class Config extends React.Component {
           </Form.Field>
         </div>
 
-        <Form.Input fluid size='massive' placeholder='Name' name='name' value={order.name} onChange={this.onChange} />
+        <Divider />
+
+        <Form.Input fluid size='massive' placeholder='Name' 
+          name='name' value={order.name} onChange={this.onChange} />
+
       </div>
     )
   }
